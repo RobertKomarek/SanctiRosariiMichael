@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="ErzengelMichael.Views.VersprechungenPage"
+            Title="{Binding Rosenkranz[0].TabBarTitlePromises}"
+            xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"  
+            xmlns:model="clr-namespace:ErzengelMichael.Models" 
+            x:Name="BrowseItemsPage" BarBackgroundColor="{OnPlatform Android=Purple, iOS=DarkSlateBlue}">
+            <!--xmlns:behaviors="http://xamarin.com/schemas/2020/toolkit"-->
+
+    <!--<TabbedPage.Resources>
+        --><!--<ResourceDictionary>--><!--
+            <Style TargetType="TabbedPage">
+                <Setter Property="BarBackgroundColor">
+                    <Setter.Value>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="#FF800080" />
+                        <On Platform="iOS" Value="#FF483D8B" />
+                    </OnPlatform>
+                </Setter.Value>
+                </Setter>
+            </Style>
+        --><!--</ResourceDictionary>--><!--
+    </TabbedPage.Resources>-->
+
+    <TabbedPage.BindingContext>
+        <vm:RosenkranzViewModel/>
+    </TabbedPage.BindingContext>
+
+    <ContentPage Title="{Binding Rosenkranz[0].ContentPageTitlePromisesMichael}" >
+        <Grid RowDefinitions="*,*,*,*" >
+            <Image Aspect="AspectFill" Source="heer_der_engel.jpg" Grid.RowSpan="4" />
+            <!--<behaviors:MediaElement Source="ms-appx:///chor_engel.mp4" ShowsPlaybackControls="False"
+                    Aspect="AspectFill" IsLooping="True" AutoPlay="True" Grid.RowSpan="4">
+            </behaviors:MediaElement>-->
+
+            <BoxView Style="{StaticResource BoxViewLinearGradientBrush}" Grid.RowSpan="4"/>
+
+            <!--<Label TextColor="White" Text="{Binding Rosenkranz[0].ContentPageTitlePromisesMichael}"
+                   FontAttributes="Bold" FontSize="26" />-->
+
+             <StackLayout Padding="10" Spacing="10" Grid.Row="2" Grid.RowSpan="2" >
+                <BoxView Style="{StaticResource BoxViewWhite}" />
+                <ScrollView>
+                    <Label TextColor="White" FontSize="22" Text="{Binding Rosenkranz[0].Promises}"/>
+                </ScrollView>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage>
+
+    <ContentPage Title="{Binding Rosenkranz[0].ContentPageTitleIndulgences}">
+        <Grid RowDefinitions="*,*,*,*">
+
+            <Image Source="piusix.jpg" Grid.RowSpan="4" Aspect="AspectFill" Opacity="0.7" />
+
+            <!--<BoxView>
+                <BoxView.Background>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="DarkSlateBlue" Offset="0.7"/>
+                        --><!--<GradientStop Color="DarkSlateBlue" Offset="0.3" />--><!--
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>-->
+            <BoxView Grid.Row="0" Grid.RowSpan="4" Style="{StaticResource BoxViewLinearGradientBrush}"/>
+
+            <StackLayout Grid.Row="2" Grid.RowSpan="2" Padding="10" Spacing="10">
+            <BoxView Style="{StaticResource BoxViewWhite}" />
+            <ScrollView>
+                <Label TextColor="White" FontSize="Large" Text="{Binding Rosenkranz[0].Indulgences}" />
+            </ScrollView>
+        </StackLayout>
+
+        </Grid>
+
+    </ContentPage>
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>
+    --><!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    --><!--
+    <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" x:DataType="model:Item">
+                        <Label Text="{Binding Text}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                        <Label Text="{Binding Description}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>-->
+</TabbedPage>

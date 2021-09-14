@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
+             xmlns:pcv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:sfExpander="clr-namespace:Syncfusion.XForms.Expander;assembly=Syncfusion.Expander.XForms"
+             x:Class="ErzengelMichael.Views.EinstellungenPage"
+             Title="{Binding Rosenkranz[0].TabBarTitleSettings}">
+
+<ContentPage.BindingContext>
+    <vm:RosenkranzViewModel/>
+</ContentPage.BindingContext>
+
+<ContentPage.Background>
+    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.1" Color="Purple" />
+        <GradientStop Offset="0.9" Color="DarkSlateBlue" />
+    </LinearGradientBrush>
+</ContentPage.Background>
+
+<ContentPage.Content>
+    <ScrollView>
+        <StackLayout Spacing="35">
+
+            <sfExpander:SfExpander HeaderIconPosition="Start" DynamicSizeMode="Content">
+            <sfExpander:SfExpander.Header>
+                <StackLayout HeightRequest="65">
+                    <Label Text="{Binding Rosenkranz[0].SettingsText}" FontSize="Large" FontAttributes="Bold" />
+                </StackLayout>
+            </sfExpander:SfExpander.Header>
+            <sfExpander:SfExpander.Content>
+                    <ListView ItemsSource="{Binding Languages}"
+                                HasUnevenRows="True"
+                                CachingStrategy="RecycleElement"
+                                BackgroundColor="Transparent">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid ColumnDefinitions="*,*" Margin="20">
+                                        <ImageButton CornerRadius="25" HeightRequest="150"  BackgroundColor="Transparent" CommandParameter="{Binding CommandParameter}" 
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:RosenkranzViewModel}}, Path=ChangeLanguageCommand}"
+                                            Source="{Binding Source}" VerticalOptions="Center" Aspect="AspectFill" />
+                                        <Label Grid.Column="1" Text="{Binding Language}" FontSize="Large" VerticalOptions="Center" Margin="10,0,0,0"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+            </sfExpander:SfExpander.Content>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState Name="Expanded">
+                            <VisualState.Setters>
+                                <Setter Property="HeaderBackgroundColor" Value="LightGray"/>
+                                <Setter Property="IconColor" Value="Black"/>
+                                <Setter Property="BackgroundColor" Value="White"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState Name="Collapsed">
+                            <VisualState.Setters>
+                                <Setter Property="HeaderBackgroundColor" Value="White"/>
+                                <Setter Property="IconColor" Value="Black"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+        </sfExpander:SfExpander>  
+                  
+            <StackLayout Spacing="25" Margin="5,20,5,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <!--<BoxView Style="{StaticResource BoxViewWhite}"/>-->
+                <pcv:PancakeView Sides="100" Border="{pcv:BorderMarkup Color=LightGray, Thickness=3}">
+                    <Image Source="michaelpd.jpg" HeightRequest="200" Aspect="AspectFit" Margin="-27" />
+                </pcv:PancakeView>
+                <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="SANCTI ROSARII MICHAEL" TextColor="White"
+                        FontFamily="OldStandardBold" FontSize="28"/>
+                <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Development and Design by (tap on address to send mail):" TextColor="White"/>
+                <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="20"  Text="robert.komarek98@gmail.com" TextColor="MediumPurple">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label HorizontalOptions="Center" Text="Version 1.4" TextColor="White" FontAttributes="Italic"/>
+                <Label HorizontalOptions="Center" TextColor="White" HorizontalTextAlignment="Center"
+                        Text="Images used in this App are in the public domain worldwide."/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label HorizontalTextAlignment="Center" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="&#xf4ec;" FontFamily="FA-B" TextColor="White" CharacterSpacing="20" FontSize="34" />
+                                <Span Text="&#xf4ed;" FontFamily="FA-B" TextColor="White" CharacterSpacing="20" FontSize="34"  />
+                                <Span Text="&#xf25e;" FontFamily="FA-B" TextColor="White" CharacterSpacing="20" FontSize="34"  />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\finger_swipe_left_right.json" />
+    <None Remove="Resources\FontAwesome5Brands.otf" />
+    <None Remove="Resources\FontAwesome5Regular.otf" />
+    <None Remove="Resources\FontAwesome5Solid.otf" />
+    <None Remove="Resources\OldStandardBold.ttf" />
+    <None Remove="Resources\OldStandardRegular.ttf" />
+    <None Remove="Resources\SchwabacherFont.ttf" />
+    <None Remove="Syncfusion.Xamarin.SfListView" />
+    <None Remove="obj\ErzengelMichael.csproj.nuget.g.props" />
+    <None Remove="obj\ErzengelMichael.csproj.nuget.g.targets" />
+    <None Remove="obj\project.nuget.cache" />
+    <None Remove="Syncfusion.Xamarin.Expander" />
+    <None Remove="MagicGradients" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="obj\ErzengelMichael.csproj.nuget.dgspec.json" />
+    <Content Remove="obj\project.assets.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\netstandard2.0\ErzengelMichael.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\ParallexView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\finger_swipe_left_right.json" />
+    <EmbeddedResource Include="Resources\FontAwesome5Brands.otf" />
+    <EmbeddedResource Include="Resources\FontAwesome5Regular.otf" />
+    <EmbeddedResource Include="Resources\FontAwesome5Solid.otf" />
+    <EmbeddedResource Include="Resources\OldStandardBold.ttf" />
+    <EmbeddedResource Include="Resources\OldStandardRegular.ttf" />
+    <EmbeddedResource Include="Resources\SchwabacherFont.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />  
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+    <PackageReference Include="Syncfusion.Xamarin.Expander" Version="19.2.0.47" />
+    <PackageReference Include="MagicGradients" Version="1.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\ParallexView.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\GebetePage.xaml.cs">
+      <DependentUpon>GebetePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\VersprechungenPage.xaml.cs">
+      <DependentUpon>VersprechungenPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\netstandard2.0\ref\" />
+    <Folder Include="obj\Debug\netstandard2.0\ref\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\netstandard2.0\ErzengelMichael.assets.cache" />
+  </ItemGroup>
+
+</Project>

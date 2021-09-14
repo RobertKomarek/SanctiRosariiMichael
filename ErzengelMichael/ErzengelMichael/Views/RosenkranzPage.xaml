@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="ErzengelMichael.Views.RosenkranzPage"
+            xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
+            xmlns:pcv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+            xmlns:magic="http://magic.com/schemas/gradients"
+            Title="{Binding Rosenkranz[0].ContentPageTitle}" >
+            
+    <ContentPage.BindingContext>
+        <vm:RosenkranzViewModel/>
+    </ContentPage.BindingContext>
+   
+        <!--13 rows-->
+        <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*"
+              ColumnDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*">
+
+             <!--<magic:GradientView VerticalOptions="FillAndExpand" Opacity="0.8" Grid.Row="6" Grid.RowSpan="7" Grid.ColumnSpan="13" >
+                <magic:GradientView.GradientSource>
+                    <magic:CssGradientSource>
+                        <x:String>
+                            <![CDATA[
+                            radial-gradient(circle at top center, rgb(235, 41, 254),rgb(185, 42, 217),rgb(134, 42, 180),rgb(84, 43, 142),rgb(33, 43, 105))
+                             ]]>
+                        </x:String>
+                    </magic:CssGradientSource>
+                </magic:GradientView.GradientSource>
+            </magic:GradientView>-->
+
+            <BoxView  Grid.RowSpan="13" Grid.ColumnSpan="13" Style="{StaticResource BoxViewLinearGradientBrush}" />
+
+            <pcv:PancakeView Grid.RowSpan="11" Grid.ColumnSpan="13" CornerRadius="0,0,35,35" 
+                             Border="{pcv:BorderMarkup Color=DarkSlateBlue, Thickness=1}">
+                <CarouselView x:Name="myCarouselView" 
+                            VerticalOptions="Center"
+                            ItemsSource="{Binding Rosenkranz}"
+                            IndicatorView="LandingIndicator"
+                            Position="{Binding CarouselViewPosition, Mode=TwoWay}"  >
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Image Grid.Row="0" Grid.RowSpan="11" Grid.ColumnSpan="13" Source="{Binding ImageofAngel}" Aspect="AspectFill" />
+                                <BoxView Grid.Row="0" Grid.RowSpan="11" Grid.ColumnSpan="13"  Style="{StaticResource BoxViewLinearGradientBrush}" />
+                                <Label Grid.Row="0" Grid.RowSpan="6" Grid.ColumnSpan="13" Text="{Binding ManualHeader}" FontFamily="OldStandardBold"
+                                       VerticalOptions="Start" FontSize="28" Margin="10" TextColor="White" HorizontalTextAlignment="Center"/>
+                                <!--<lottie:AnimationView Animation="swipe_gesture_left.json" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="13"
+                                    IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:RosenkranzViewModel}}, Path=LottieSwipeLeftIsVisible}"
+                                    RepeatCount="7" AutoPlay="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                <lottie:AnimationView Grid.Row="6" Grid.RowSpan="5" Grid.ColumnSpan="13" Margin="-300,0,0,0" Animation="swipe_gesture_up.json"
+                                    IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:RosenkranzViewModel}}, Path=LottieSwipeUpIsVisible}"
+                                    RepeatCount="4" AutoPlay="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />-->
+                                <ScrollView Grid.Row="7" Grid.RowSpan="4" Grid.ColumnSpan="13">
+                                    <Label Text="{Binding Prayer}" BackgroundColor="Transparent" FontSize="Large" Margin="10,0,10,0"
+                                        TextColor="White" HorizontalOptions="Fill" VerticalOptions="Fill" IsEnabled="False" HorizontalTextAlignment="Center"/>
+                                </ScrollView>
+                                </Grid>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </pcv:PancakeView>        
+
+            <StackLayout Grid.Row="6" Grid.ColumnSpan="13" VerticalOptions="End" Padding="10" >
+                <BoxView Style="{StaticResource BoxViewWhite}" />
+            </StackLayout>
+            
+             <StackLayout Margin="0,3,0,0" Grid.Row="11" Grid.ColumnSpan="13" HorizontalOptions="Center" VerticalOptions="Start" >
+                <IndicatorView x:Name="LandingIndicator" IndicatorsShape="Circle"
+                    IndicatorColor="White" SelectedIndicatorColor="Red" />
+            </StackLayout>
+         
+            <Button BackgroundColor="Transparent" FontSize="33" Text="&#xf100;" FontFamily="FA-S" VerticalOptions="End" Margin="0,10,0,20"
+            Command="{Binding BackToPageOneCommand}" TextColor="White" Grid.Row="11" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" />
+              
+            <Button BackgroundColor="Transparent" FontSize="33" Text="&#xf104;" FontFamily="FA-S" VerticalOptions="End" Margin="0,10,0,20"
+            Command="{Binding BackOnePositionCommand}" TextColor="White" Grid.Row="11" Grid.RowSpan="2" Grid.Column="6" Grid.ColumnSpan="2" />
+            
+            <Button BackgroundColor="Transparent" FontSize="33" Text="&#xf105;" FontFamily="FA-S" VerticalOptions="End" Margin="0,10,0,20"
+            Command="{Binding ForwardOnePositionCommand}" TextColor="White" Grid.Row="11" Grid.RowSpan="2" Grid.Column="10" Grid.ColumnSpan="2" />
+            
+        </Grid>
+
+    </ContentPage>
+
+
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ErzengelMichael.Views" 
+       Title="ErzengelMichael"
+       xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
+       x:Class="ErzengelMichael.AppShell">
+
+    <Shell.BindingContext>
+        <vm:RosenkranzViewModel/>
+    </Shell.BindingContext>
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <!--<Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />-->
+                <Setter Property="Shell.BackgroundColor" Value="Purple"/>
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <!--<Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />-->
+                <Setter Property="Shell.TabBarBackgroundColor" Value="DarkSlateBlue" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.PresentationMode" Value="Modal" />
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+
+    <TabBar>
+        <ShellContent Title="{Binding Rosenkranz[0].TabBarTitleRosary}" Icon="rosary.png" Route="RosenkranzPage" ContentTemplate="{DataTemplate local:RosenkranzPage}" />
+        <ShellContent Title="{Binding Rosenkranz[0].TabBarTitlePromises}" Icon="promises.png" ContentTemplate="{DataTemplate local:VersprechungenPage}" />
+        <ShellContent Title="{Binding Rosenkranz[0].TabBarTitlePrayers}" Icon="prayer.png" ContentTemplate="{DataTemplate local:GebetePage}" />
+        <ShellContent Title="{Binding Rosenkranz[0].TabBarTitleSettings}" Icon="setting.png" ContentTemplate="{DataTemplate local:EinstellungenPage}" />
+    </TabBar>
+
+    <!--
+        If you would like to navigate to this content you can do so by calling
+        await Shell.Current.GoToAsync("//LoginPage");
+    -->
+    <!--<TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:AblassPage}" />
+    </TabBar>-->
+
+
+</Shell>

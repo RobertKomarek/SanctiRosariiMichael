@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
+             x:Class="ErzengelMichael.App" >
+
+    <Application.BindingContext>
+        <vm:RosenkranzViewModel/>
+    </Application.BindingContext>
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+
+            <Style x:Key="BoxViewWhite" TargetType="BoxView">
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform iOS="0.5" Android="0.2"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Color" Value="White"/>
+            </Style>
+
+            <Style x:Key="BoxViewGray" TargetType="BoxView">
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform iOS="0.5" Android="0.2"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Color" Value="Gray"/>
+            </Style>
+
+            <Style x:Key="BoxViewLinearGradientBrush" TargetType="BoxView">
+                <Setter Property="Opacity">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="1.0"/>
+                            <On Platform="iOS" Value="0.7"/>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                            <GradientStop Color="Transparent" Offset="0.1"/>
+                            <GradientStop Color="DarkSlateBlue" Offset="0.6"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="ContentPage" x:Key="RosenkranzContentPage">
+                <Setter Property="NavigationPage.Title" Value="{Binding}"/>
+            </Style>
+            
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+
+            <!--FontAwesomeBrands--><!--
+            <OnPlatform x:TypeArguments="x:String" x:Key="FA-B">
+                <On Platform="Android" Value="FontAwesome5Brands.otf#Regular" />
+                <On Platform="iOS" Value="FontAwesome5Brands-Regular" />
+            </OnPlatform>
+            --><!--FontAwesomeSolid--><!--
+            <OnPlatform x:TypeArguments="x:String" x:Key="FA-S">
+                <On Platform="Android" Value="FontAwesome5Solid.otf#Regular" />
+                <On Platform="iOS" Value="FontAwesome5Free-Solid" />
+            </OnPlatform>
+            --><!--FontAwesomeRegular--><!--
+            <OnPlatform x:TypeArguments="x:String" x:Key="FA-R">
+                <On Platform="Android" Value="FontAwesome5Regular.otf#Regular" />
+                <On Platform="iOS" Value="FontAwesome5Free-Regular" />
+            </OnPlatform>-->
+
+
+            <!--<Style TargetType="TabbedPage">
+                <Setter Property="BarBackgroundColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="Android" Value="Purple" />
+                            <On Platform="iOS" Value="DarkSlateBlue" />
+                            --><!--<On Platform="Android" Value="#FF800080" />
+                            <On Platform="iOS" Value="#FF483D8B" />--><!--
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>-->
+
+
+
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.4" package="com.robertkomarek.sanctirosariimichael" android:installLocation="auto" android:versionCode="5">
+	<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="30" />
+	<application android:label="Sancti Rosarii Michael" android:theme="@style/MainTheme" android:roundIcon="@mipmap/ic_launcher_round" android:icon="@mipmap/ic_launcher"></application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<!-- <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+        <background android:drawable="@color/ic_launcher_background" />
+        <foreground android:drawable="@mipmap/ic_launcher_foreground" />
+    </adaptive-icon>-->
+</manifest>
