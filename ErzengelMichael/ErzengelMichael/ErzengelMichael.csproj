@@ -19,6 +19,8 @@
     <None Remove="obj\project.nuget.cache" />
     <None Remove="Syncfusion.Xamarin.Expander" />
     <None Remove="MagicGradients" />
+    <None Remove="Microsoft.AppCenter.Crashes" />
+    <None Remove="Microsoft.AppCenter.Analytics" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +50,8 @@
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
     <PackageReference Include="Syncfusion.Xamarin.Expander" Version="19.2.0.47" />
     <PackageReference Include="MagicGradients" Version="1.3.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.3.0" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>

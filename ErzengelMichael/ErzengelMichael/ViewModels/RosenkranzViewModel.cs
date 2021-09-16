@@ -352,7 +352,7 @@ namespace ErzengelMichael.ViewModels
                 Prayer = "Heiliger Erzengel Michael! Ich empfehle Dir die Stunde meines Todes; halte in derselben den bösen Feind gefangen, dass er mich nicht anfechten und meiner Seele nicht schaden kann."
                 + Environment.NewLine + Environment.NewLine + "Vater unser…",
 
-                ImageofAngel = "michaelpd.jpg"
+                ImageofAngel = "michael.jpg"
             });
 
             getLanguage.Add(new Rosenkranz
@@ -603,7 +603,7 @@ namespace ErzengelMichael.ViewModels
                     "O God, come to my assistance. O Lord, make haste to help me. Glory be to the Father, to the Son," +
                     " and to the Holy Spirit, as it was in the beginning, is now and will be forever, time without end. Amen.",
 
-                ImageofAngel = "michaelpd.jpg"
+                ImageofAngel = "michael.jpg"
 
             });
 
@@ -844,7 +844,7 @@ namespace ErzengelMichael.ViewModels
                 Prayer = "Saint Michel Archange, défendez-nous dans le combat pour que nous ne périssions pas au jour du Jugement. O Dieu, venez à mon " +
                     "aide, Seigneur, hâtez vous de me secourir.",
 
-                ImageofAngel = "michaelpd.jpg"
+                ImageofAngel = "michael.jpg"
 
             });
 
@@ -1058,7 +1058,7 @@ namespace ErzengelMichael.ViewModels
                 Prayer = "Deus, vinde em meu auxílio. Senhor, socorrei-me e salvai-me. Glória ao Pai, ao Filho e ao Espírito Santo, assim como" +
                     " era no princípio, agora e sempre.",
 
-                ImageofAngel = "michaelpd.jpg"
+                ImageofAngel = "michael.jpg"
 
             });
 
@@ -1315,7 +1315,7 @@ namespace ErzengelMichael.ViewModels
                 "nei secoli dei secoli.Amen." + Environment.NewLine +
                 "San Michele Arcangelo, difendici nella lotta, per essere salvati nell'estremo giudizio.",
 
-                ImageofAngel = "michaelpd.jpg"
+                ImageofAngel = "michael.jpg"
             });
 
             getLanguage.Add(new Rosenkranz
@@ -1542,7 +1542,7 @@ namespace ErzengelMichael.ViewModels
                 "Dios mío, ven en mi auxilio.Señor, date prisa en socorrerme." + Environment.NewLine +
                 "Gloria al Padre, al Hijo y al Espíritu santo. Amén",
 
-                ImageofAngel = "michaelpd.jpg"
+                ImageofAngel = "michael.jpg"
             });
 
             getLanguage.Add(new Rosenkranz

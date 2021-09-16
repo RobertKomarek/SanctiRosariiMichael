@@ -4,6 +4,7 @@
              xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
              xmlns:pcv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:sfExpander="clr-namespace:Syncfusion.XForms.Expander;assembly=Syncfusion.Expander.XForms"
+             xmlns:magic="http://magic.com/schemas/gradients"
              x:Class="ErzengelMichael.Views.EinstellungenPage"
              Title="{Binding Rosenkranz[0].TabBarTitleSettings}">
 
@@ -19,7 +20,7 @@
 </ContentPage.Background>
 
 <ContentPage.Content>
-    <ScrollView>
+    <ScrollView>            
         <StackLayout Spacing="35">
 
             <sfExpander:SfExpander HeaderIconPosition="Start" DynamicSizeMode="Content">
@@ -68,29 +69,48 @@
             </VisualStateManager.VisualStateGroups>
         </sfExpander:SfExpander>  
                   
-            <StackLayout Spacing="25" Margin="5,20,5,0" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Spacing="25" Margin="50,20,50,20" HorizontalOptions="Center" VerticalOptions="Center">
                 <!--<BoxView Style="{StaticResource BoxViewWhite}"/>-->
                 <pcv:PancakeView Sides="100" Border="{pcv:BorderMarkup Color=LightGray, Thickness=3}">
-                    <Image Source="michaelpd.jpg" HeightRequest="200" Aspect="AspectFit" Margin="-27" />
+                    <Image Source="michael.jpg" HeightRequest="200" Aspect="AspectFit" Margin="-27" />
                 </pcv:PancakeView>
                 <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="SANCTI ROSARII MICHAEL" TextColor="White"
                         FontFamily="OldStandardBold" FontSize="28"/>
-                <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Development and Design by (tap on address to send mail):" TextColor="White"/>
-                <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="20"  Text="robert.komarek98@gmail.com" TextColor="MediumPurple">
+                <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Development and Design by:" TextColor="White"/>
+                <Label TextDecorations="Underline" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="robert.komarek98@gmail.com" TextColor="White">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                     </Label.GestureRecognizers>
                 </Label>
                 <Label HorizontalOptions="Center" Text="Version 1.4" TextColor="White" FontAttributes="Italic"/>
+                <BoxView HeightRequest="1.0" Color="White"  />
                 <Label HorizontalOptions="Center" TextColor="White" HorizontalTextAlignment="Center"
-                        Text="Images used in this App are in the public domain worldwide."/>
+                        Text="Images used in this App are in the public domain worldwide"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                     <Label HorizontalTextAlignment="Center" >
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="&#xf4ec;" FontFamily="FA-B" TextColor="White" CharacterSpacing="20" FontSize="34" />
-                                <Span Text="&#xf4ed;" FontFamily="FA-B" TextColor="White" CharacterSpacing="20" FontSize="34"  />
-                                <Span Text="&#xf25e;" FontFamily="FA-B" TextColor="White" CharacterSpacing="20" FontSize="34"  />
+                                <Span Text="&#xf4ec;" FontFamily="FA-B" TextColor="White" CharacterSpacing="10" FontSize="34" />
+                                <Span Text="&#xf4ed;" FontFamily="FA-B" TextColor="White" CharacterSpacing="10" FontSize="34"  />
+                                <Span Text="&#xf4f3;" FontFamily="FA-B" TextColor="White" CharacterSpacing="10" FontSize="34"  />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <Label Text="Creative Commons" TextColor="White" HorizontalTextAlignment="Center" TextDecorations="Underline" >
+                    <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="&#xf25e;" FontFamily="FA-B" TextColor="White" CharacterSpacing="10" FontSize="34" />
+                                <Span Text="&#xf4e7;" FontFamily="FA-B" TextColor="White" CharacterSpacing="10" FontSize="34" />
+                                <Span Text="&#xf4ef;" FontFamily="FA-B" TextColor="White" CharacterSpacing="10" FontSize="34" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>

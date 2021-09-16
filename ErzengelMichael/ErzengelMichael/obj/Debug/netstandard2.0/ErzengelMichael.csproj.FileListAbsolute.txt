@@ -3,6 +3,7 @@
 /Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/bin/Debug/netstandard2.0/ref/ErzengelMichael.dll
 /Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/bin/Debug/netstandard2.0/ErzengelMichael.pdb
 /Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/obj/Debug/netstandard2.0/ErzengelMichael.csproj.AssemblyReference.cache
+/Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/obj/Debug/netstandard2.0/ErzengelMichael.GeneratedMSBuildEditorConfig.editorconfig
 /Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/obj/Debug/netstandard2.0/AppShell.xaml.g.cs
 /Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/obj/Debug/netstandard2.0/Views/EinstellungenPage.xaml.g.cs
@@ -16,4 +17,3 @@
 /Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/obj/Debug/netstandard2.0/ErzengelMichael.dll
 /Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/obj/Debug/netstandard2.0/ref/ErzengelMichael.dll
 /Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/obj/Debug/netstandard2.0/ErzengelMichael.pdb
-/Users/marinakomarek/Downloads/ErzengelMichael/ErzengelMichael/ErzengelMichael/obj/Debug/netstandard2.0/ErzengelMichael.GeneratedMSBuildEditorConfig.editorconfig
