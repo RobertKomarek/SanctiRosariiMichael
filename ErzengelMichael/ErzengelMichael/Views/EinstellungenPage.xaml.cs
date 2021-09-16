@@ -42,7 +42,7 @@ namespace ErzengelMichael.Views
             //Launcher.OpenAsync($"mailto:{address}");
         }
 
-        async void TapGestureRecognizer_Tapped_1(System.Object sender, System.EventArgs e)
+        async void OpenCreativeCommons(System.Object sender, System.EventArgs e)
         {
             await Browser.OpenAsync("https://creativecommons.org/licenses/by-sa/4.0/");
         }
