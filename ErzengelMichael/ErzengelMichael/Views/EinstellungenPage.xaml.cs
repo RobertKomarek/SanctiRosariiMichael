@@ -37,12 +37,10 @@ namespace ErzengelMichael.Views
                 App.Current.MainPage.DisplayAlert("Info", "Bitte installieren Sie eine Mail-Applikation aus dem Play- bzw. App Store zum Verwenden dieser Funktion!"
                     + Environment.NewLine + Environment.NewLine + "Please install a Mail-App from Play- or App Store to use this function!", "OK");
             }
-
-            //var address = "robert.komarek98@gmail.com";
-            //Launcher.OpenAsync($"mailto:{address}");
+          
         }
 
-        async void OpenCreativeCommons(System.Object sender, System.EventArgs e)
+        async void OpenCreativeCommonsEventHandler(System.Object sender, System.EventArgs e)
         {
             await Browser.OpenAsync("https://creativecommons.org/licenses/by-sa/4.0/");
         }

@@ -100,7 +100,7 @@
 
                 <Label Text="Creative Commons" TextColor="White" HorizontalTextAlignment="Center" TextDecorations="Underline" >
                     <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OpenCreativeCommons" />
+                            <TapGestureRecognizer Tapped="OpenCreativeCommonsEventHandler" />
                     </Label.GestureRecognizers>
                 </Label>
 
