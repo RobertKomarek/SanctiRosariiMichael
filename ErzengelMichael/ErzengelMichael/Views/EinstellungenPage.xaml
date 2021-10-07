@@ -6,7 +6,8 @@
              xmlns:sfExpander="clr-namespace:Syncfusion.XForms.Expander;assembly=Syncfusion.Expander.XForms"
              xmlns:magic="http://magic.com/schemas/gradients"
              x:Class="ErzengelMichael.Views.EinstellungenPage"
-             Title="{Binding Rosenkranz[0].TabBarTitleSettings}">
+             Title="{Binding Rosenkranz[0].TabBarTitleSettings}"
+             BackgroundColor="DarkSlateBlue">
 
 <ContentPage.BindingContext>
     <vm:RosenkranzViewModel/>
@@ -20,7 +21,18 @@
 </ContentPage.Background>
 
 <ContentPage.Content>
-    <ScrollView>            
+
+     
+<Grid RowDefinitions="*,*,*,*">
+
+    <magic:GradientView
+        Grid.RowSpan="4"
+        GradientSource="radial-gradient(circle at 47% 14%, rgba(205, 205, 205,0.04) 0%, rgba(205, 205, 205,0.04) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 35% 12%, rgba(215, 215, 215,0.04) 0%, rgba(215, 215, 215,0.04) 4%,transparent 4%, transparent 100%),radial-gradient(circle at 1% 35%, rgba(24, 24, 24,0.04) 0%, rgba(24, 24, 24,0.04) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 21% 1%, rgba(0, 0, 0,0.04) 0%, rgba(0, 0, 0,0.04) 26%,transparent 26%, transparent 100%),radial-gradient(circle at 23% 82%, rgba(249, 249, 249,0.04) 0%, rgba(249, 249, 249,0.04) 60%,transparent 60%, transparent 100%),radial-gradient(circle at 11% 54%, rgba(251, 251, 251,0.04) 0%, rgba(251, 251, 251,0.04) 23%,transparent 23%, transparent 100%),radial-gradient(circle at 69% 68%, rgba(234, 234, 234,0.04) 0%, rgba(234, 234, 234,0.04) 10%,transparent 10%, transparent 100%),linear-gradient(181deg, rgb(228, 46, 222),rgb(63, 61, 215))"
+    />
+
+    <BoxView Grid.RowSpan="4" BackgroundColor="Black" Opacity="0.2"/>
+
+    <ScrollView Grid.RowSpan="4">            
         <StackLayout Spacing="35">
 
             <sfExpander:SfExpander HeaderIconPosition="Start" DynamicSizeMode="Content">
@@ -119,5 +131,6 @@
 
         </StackLayout>
     </ScrollView>
+    </Grid>
 </ContentPage.Content>
 </ContentPage>

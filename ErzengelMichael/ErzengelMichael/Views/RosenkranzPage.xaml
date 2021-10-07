@@ -5,12 +5,22 @@
             xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
             xmlns:pcv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
             xmlns:magic="http://magic.com/schemas/gradients"
-            Title="{Binding Rosenkranz[0].ContentPageTitle}" >
+            Title="{Binding Rosenkranz[0].ContentPageTitle}"
+            Background="Transparent">
             
     <ContentPage.BindingContext>
         <vm:RosenkranzViewModel/>
     </ContentPage.BindingContext>
-   
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.3" Color="Purple" />
+            <GradientStop Offset="0.5" Color="White"/>
+            <GradientStop Offset="0.6" Color="#5A5096"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
         <!--13 rows-->
         <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*"
               ColumnDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*">
@@ -20,8 +30,8 @@
                     <magic:CssGradientSource>
                         <x:String>
                             <![CDATA[
-                            radial-gradient(circle at top center, rgb(235, 41, 254),rgb(185, 42, 217),rgb(134, 42, 180),rgb(84, 43, 142),rgb(33, 43, 105))
-                             ]]>
+                            radial-gradient(circle at 25% 54%, rgba(18, 18, 18,0.06) 0%, rgba(18, 18, 18,0.06) 22%,transparent 22%, transparent 100%),radial-gradient(circle at 67% 98%, rgba(223, 223, 223,0.06) 0%, rgba(223, 223, 223,0.06) 52%,transparent 52%, transparent 100%),radial-gradient(circle at 7% 92%, rgba(169, 169, 169,0.06) 0%, rgba(169, 169, 169,0.06) 52%,transparent 52%, transparent 100%),radial-gradient(circle at 46% 37%, rgba(187, 187, 187,0.06) 0%, rgba(187, 187, 187,0.06) 47%,transparent 47%, transparent 100%),radial-gradient(circle at 38% 35%, rgba(57, 57, 57,0.06) 0%, rgba(57, 57, 57,0.06) 99%,transparent 99%, transparent 100%),radial-gradient(circle at 46% 86%, rgba(100, 100, 100,0.06) 0%, rgba(100, 100, 100,0.06) 60%,transparent 60%, transparent 100%),linear-gradient(350deg, rgb(57, 8, 200),rgb(240, 145, 202))
+                            ]]>
                         </x:String>
                     </magic:CssGradientSource>
                 </magic:GradientView.GradientSource>
@@ -78,8 +88,8 @@
             Command="{Binding ForwardOnePositionCommand}" TextColor="White" Grid.Row="11" Grid.RowSpan="2" Grid.Column="10" Grid.ColumnSpan="2" />
             
         </Grid>
-
-    </ContentPage>
+    </ContentPage.Content>
+</ContentPage>
 
 
 

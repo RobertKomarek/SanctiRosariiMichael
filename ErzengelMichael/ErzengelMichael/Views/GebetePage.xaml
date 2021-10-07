@@ -3,19 +3,29 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
             xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
             x:Class="ErzengelMichael.Views.GebetePage"
-            Title="{Binding Rosenkranz[0].TabBarTitlePrayers}"
-            BarBackgroundColor="{OnPlatform Android=Purple, iOS=DarkSlateBlue}">
+            BarBackgroundColor="{OnPlatform iOS=DarkSlateBlue, Android=Purple}"
+            xmlns:magic="http://magic.com/schemas/gradients"
+            Title="{Binding Rosenkranz[0].TabBarTitlePrayers}">
 
     <TabbedPage.BindingContext>
         <vm:RosenkranzViewModel/>
     </TabbedPage.BindingContext>
 
-    <ContentPage Title="{Binding Rosenkranz[0].ContentPageTitleLeoXIII}">
+    <ContentPage Title="{Binding Rosenkranz[0].ContentPageTitleLeoXIII}" BackgroundColor="DarkSlateBlue">
+
+        <ContentPage.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0.3" Color="Purple" />
+                <GradientStop Offset="0.5" Color="White"/>
+                <GradientStop Offset="0.6" Color="#5A5096"/>
+            </LinearGradientBrush>
+        </ContentPage.Background>
+
         <Grid RowDefinitions="*,*,*,*" >
             <!--<MediaElement Source="ms-appx:///raised_cross.mp4" ShowsPlaybackControls="False"
                     Aspect="AspectFill" IsLooping="True" AutoPlay="True"
                     HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />-->
-            <Image Grid.Row="0" Grid.RowSpan="4" Source="leoxiii.jpg" Aspect="AspectFill" Opacity="0.7"/>
+            <Image Grid.Row="0" Grid.RowSpan="4" Source="leoxiii.jpg" Aspect="AspectFill"/>
            
             <BoxView Grid.Row="0" Grid.RowSpan="4" Style="{StaticResource BoxViewLinearGradientBrush}"/>
 
@@ -34,125 +44,50 @@
                         <Label Text="{Binding Rosenkranz[0].PrayerLeoXIIILatin}" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" />
                         <BoxView Style="{StaticResource BoxViewWhite}" />
                     </StackLayout>
-                    <!--<ListView
-                    ItemsSource="{Binding Rosenkranz}" 
-                    HasUnevenRows="True" 
-                    CachingStrategy="RecycleElement">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <Label Text="{Binding PrayerLeoXIII}" TextColor="White" FontSize="20" />
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>-->
                 </ScrollView>
             </StackLayout>
         </Grid>
     </ContentPage>
 
-    <ContentPage Title="{Binding Rosenkranz[0].ContentPageTitleLitany}">
-        <ContentPage.Background>
-            <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
-                <GradientStop Offset="0.1" Color="Purple" />
-                <!--<GradientStop Offset="0.7" Color="Transparent" />
-                <GradientStop Offset="0.5" Color="MediumPurple" />
-                    <GradientStop Offset="0.7" Color="RosyBrown" />-->
-                <GradientStop Offset="0.9" Color="DarkSlateBlue" />
-            </LinearGradientBrush>
-        </ContentPage.Background>
+    <ContentPage Title="{Binding Rosenkranz[0].ContentPageTitleLitany}" BackgroundColor="DarkSlateBlue" >
 
-        <!--<BoxView>
-            <BoxView.Background>
-                <LinearGradientBrush StartPoint="1,0" EndPoint="1,1" >
-                    <GradientStop Color="Purple" Offset="0.1"/>
-                    <GradientStop Color="White" Offset="0.9"/>
-                </LinearGradientBrush>
-            </BoxView.Background>
-        </BoxView>-->
-        <ScrollView>
-            <StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
-                             Padding="15" Spacing="15">
-                    <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
-                    <Label Text="&#xf654;" FontSize="22" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
-                    <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
-                </StackLayout>
+        <!--<ContentPage.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0.3" Color="Purple" />
+                <GradientStop Offset="0.6" Color="#5A5096"/>
+            </LinearGradientBrush>
+        </ContentPage.Background>-->
+
+        
+        <Grid RowDefinitions="*,*,*,*,*,*,*">
+
+             <magic:GradientView
+                Grid.RowSpan="7"
+                GradientSource="radial-gradient(circle at 47% 14%, rgba(205, 205, 205,0.04) 0%, rgba(205, 205, 205,0.04) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 35% 12%, rgba(215, 215, 215,0.04) 0%, rgba(215, 215, 215,0.04) 4%,transparent 4%, transparent 100%),radial-gradient(circle at 1% 35%, rgba(24, 24, 24,0.04) 0%, rgba(24, 24, 24,0.04) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 21% 1%, rgba(0, 0, 0,0.04) 0%, rgba(0, 0, 0,0.04) 26%,transparent 26%, transparent 100%),radial-gradient(circle at 23% 82%, rgba(249, 249, 249,0.04) 0%, rgba(249, 249, 249,0.04) 60%,transparent 60%, transparent 100%),radial-gradient(circle at 11% 54%, rgba(251, 251, 251,0.04) 0%, rgba(251, 251, 251,0.04) 23%,transparent 23%, transparent 100%),radial-gradient(circle at 69% 68%, rgba(234, 234, 234,0.04) 0%, rgba(234, 234, 234,0.04) 10%,transparent 10%, transparent 100%),linear-gradient(181deg, rgb(228, 46, 222),rgb(63, 61, 215))"
+             />
+
+            <BoxView Grid.RowSpan="7" BackgroundColor="Black" Opacity="0.2"/>
+
+            <StackLayout Grid.Row="1" Grid.RowSpan="6" >
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                            Padding="15" Spacing="15">
+                        <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
+                        <Label Text="&#xf654;" FontSize="22" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
+                        <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
+                    </StackLayout>
+
                     <BoxView Style="{StaticResource BoxViewWhite}" Margin="10,0,10,0"/>
 
-                    <StackLayout Spacing="10" Padding="5">
-                        <Label HorizontalTextAlignment="Center" Text="{Binding Rosenkranz[0].Litany}" 
-                            FontSize="22" TextColor="White" FontFamily="OS-B" />
-                    </StackLayout>
+                    <ScrollView>
+                        <StackLayout Spacing="10" Padding="5">
+                            <Label HorizontalTextAlignment="Center" Text="{Binding Rosenkranz[0].Litany}" 
+                                FontSize="Large" TextColor="White" />
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
             </StackLayout>
-        </ScrollView>
+        </Grid>
     </ContentPage>
 
-    
-        <!--#region Hl.Michael -->
-    <!--<ContentPage Title="Hl.Michael">
-        <Grid>
-            -->
-    <!--<BoxView>
-                <BoxView.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="Bisque" Offset="0.0" />
-                        <GradientStop Color="AntiqueWhite" Offset="0.25" />
-                        <GradientStop Color="FloralWhite" Offset="0.5" />
-                        <GradientStop Color="White" Offset="0.75" />
-                    </LinearGradientBrush>
-                </BoxView.Background>
-            </BoxView>-->
-    <!--
-            
-            <ScrollView>
-                <StackLayout Spacing="5" Padding="5">
-                    <StackLayout>
-                        <Label Text="DEUTSCH" FontSize="26" FontAttributes="Bold" />
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" >
-                            <Label Text="H" FontSize="50" FontFamily="Schwabacher"/>
-                            <Label Text="eiliger Erzengel Michael" FontFamily="OS-B" FontSize="26" />
-                        </StackLayout>
-                        <Label Text="{Binding GebetMichaelDeutsch}"  FontSize="24" />
-                    </StackLayout>
-
-                    <BoxView Style="{StaticResource BoxViewWhite}"/>
-
-                    <StackLayout Margin="0,5,0,0">
-                        <Label Text="LATEIN" FontSize="26" FontAttributes="Bold" />
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" >
-                            <Label Text="S" FontSize="50" FontFamily="Schwabacher"  />
-                            <Label Text="ancte Míchael Archángele" FontFamily="OS-B" FontSize="26" />
-                        </StackLayout>
-                        <Label Text="{Binding GebetMichaelLatein}"  FontSize="24" />
-                    </StackLayout>
-                </StackLayout>
-            </ScrollView>
-        </Grid>
-    </ContentPage>-->
-    <!--#endregion-->
-
-    <!--<ContentPage Title="Exorzismus">
-        <Grid>
-            <StackLayout Spacing="5" Padding="5">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="B" FontFamily="Schwabacher" FontSize="70"  />
-                    <Label Text="esessenheit &amp; dämonische Quälereien" FontFamily="OS-B" FontSize="26" />
-                </StackLayout>
-
-                <Label Text="Wer kann Dämonen austreiben?" FontAttributes="Bold" />
-
-                <ListView ItemsSource="{Binding Besessenheiten}" HasUnevenRows="True">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Label Text="{Binding .}" FontSize="22" />
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
-        </Grid>
-    </ContentPage>-->
-    
 </TabbedPage>
