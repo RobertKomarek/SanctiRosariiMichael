@@ -397,7 +397,7 @@ namespace ErzengelMichael.ViewModels
                 "O Ihr hocherleuchteten Cherubim! Erlanget mir die wahre Erkenntnis Gottes und die Wissenschaft der Heiligen."
                 + Environment.NewLine + Environment.NewLine + "1 Vater unser..., 3 Ave Maria",
 
-                ImageofAngel = "michael3pd.jpg"
+                ImageofAngel = "michael2pd.jpg"
             });
 
             getLanguage.Add(new Rosenkranz
@@ -645,7 +645,7 @@ namespace ErzengelMichael.ViewModels
                     "grace to govern our senses and overcome any unruly passions. Amen." + Environment.NewLine +
                     Environment.NewLine + "(Our Father, Three Hail Marys)",
 
-                ImageofAngel = "michael3pd.jpg"
+                ImageofAngel = "michael2pd.jpg"
             });
 
             getLanguage.Add(new Rosenkranz
@@ -881,7 +881,7 @@ namespace ErzengelMichael.ViewModels
                 " sens et de nous libérer de l’esclavage des passions. Ainsi soit-il." + Environment.NewLine +
                 Environment.NewLine + "(1x Notre Père, 3x Je Vous Salue Marie)",
 
-                ImageofAngel = "michael3pd.jpg"
+                ImageofAngel = "michael2pd.jpg"
             });
 
             getLanguage.Add(new Rosenkranz
@@ -1096,7 +1096,7 @@ namespace ErzengelMichael.ViewModels
                 "graça de podermos dominar os nossos sentidos." + Environment.NewLine +
                 Environment.NewLine + "(Um Pai Nosso e de três Ave Marias)",
 
-                ImageofAngel = "michael3pd.jpg"
+                ImageofAngel = "michael2pd.jpg"
 
             });
 
@@ -1352,7 +1352,7 @@ namespace ErzengelMichael.ViewModels
                 " di dominare i nostri sensi e correggere le corrotte passioni." + Environment.NewLine +
                 Environment.NewLine + "(Padre nostro e tre Ave Maria al 4° Coro Angelico).",
 
-                ImageofAngel = "michael3pd.jpg"
+                ImageofAngel = "michael2pd.jpg"
             });
 
             getLanguage.Add(new Rosenkranz
@@ -1581,7 +1581,7 @@ namespace ErzengelMichael.ViewModels
                 "la gracia de controlar nuestros sentidos y así dominar nuestras pasiones. Amén." + Environment.NewLine +
                 Environment.NewLine + "(Un Padre Nuestro y tres Avemaría)",
 
-                ImageofAngel = "michael3pd.jpg"
+                ImageofAngel = "michael2pd.jpg"
 
             });
 

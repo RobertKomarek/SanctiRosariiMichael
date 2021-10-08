@@ -7,9 +7,6 @@
 
   <ItemGroup>
     <None Remove="Resources\finger_swipe_left_right.json" />
-    <None Remove="Resources\FontAwesome5Brands.otf" />
-    <None Remove="Resources\FontAwesome5Regular.otf" />
-    <None Remove="Resources\FontAwesome5Solid.otf" />
     <None Remove="Resources\OldStandardBold.ttf" />
     <None Remove="Resources\OldStandardRegular.ttf" />
     <None Remove="Resources\SchwabacherFont.ttf" />
@@ -21,6 +18,10 @@
     <None Remove="MagicGradients" />
     <None Remove="Microsoft.AppCenter.Crashes" />
     <None Remove="Microsoft.AppCenter.Analytics" />
+    <None Remove="Fontawesome\" />
+    <None Remove="Fontawesome\FontAwesome5Brands.otf" />
+    <None Remove="Fontawesome\FontAwesome5Regular.otf" />
+    <None Remove="Fontawesome\FontAwesome5Solid.otf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,12 +37,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\finger_swipe_left_right.json" />
-    <EmbeddedResource Include="Resources\FontAwesome5Brands.otf" />
-    <EmbeddedResource Include="Resources\FontAwesome5Regular.otf" />
-    <EmbeddedResource Include="Resources\FontAwesome5Solid.otf" />
     <EmbeddedResource Include="Resources\OldStandardBold.ttf" />
     <EmbeddedResource Include="Resources\OldStandardRegular.ttf" />
     <EmbeddedResource Include="Resources\SchwabacherFont.ttf" />
+    <EmbeddedResource Include="Fontawesome\FontAwesome5Brands.otf">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fontawesome\FontAwesome5Regular.otf">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fontawesome\FontAwesome5Solid.otf">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -69,6 +76,7 @@
   <ItemGroup>
     <Folder Include="bin\Debug\netstandard2.0\ref\" />
     <Folder Include="obj\Debug\netstandard2.0\ref\" />
+    <Folder Include="Fontawesome\" />
   </ItemGroup>
 
   <ItemGroup>
