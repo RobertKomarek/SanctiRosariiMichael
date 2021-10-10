@@ -24,22 +24,14 @@
         <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*"
               ColumnDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*">
 
-             <!--<magic:GradientView VerticalOptions="FillAndExpand" Opacity="0.8" Grid.Row="6" Grid.RowSpan="7" Grid.ColumnSpan="13" >
-                <magic:GradientView.GradientSource>
-                    <magic:CssGradientSource>
-                        <x:String>
-                            <![CDATA[
-                            radial-gradient(circle at 25% 54%, rgba(18, 18, 18,0.06) 0%, rgba(18, 18, 18,0.06) 22%,transparent 22%, transparent 100%),radial-gradient(circle at 67% 98%, rgba(223, 223, 223,0.06) 0%, rgba(223, 223, 223,0.06) 52%,transparent 52%, transparent 100%),radial-gradient(circle at 7% 92%, rgba(169, 169, 169,0.06) 0%, rgba(169, 169, 169,0.06) 52%,transparent 52%, transparent 100%),radial-gradient(circle at 46% 37%, rgba(187, 187, 187,0.06) 0%, rgba(187, 187, 187,0.06) 47%,transparent 47%, transparent 100%),radial-gradient(circle at 38% 35%, rgba(57, 57, 57,0.06) 0%, rgba(57, 57, 57,0.06) 99%,transparent 99%, transparent 100%),radial-gradient(circle at 46% 86%, rgba(100, 100, 100,0.06) 0%, rgba(100, 100, 100,0.06) 60%,transparent 60%, transparent 100%),linear-gradient(350deg, rgb(57, 8, 200),rgb(240, 145, 202))
-                            ]]>
-                        </x:String>
-                    </magic:CssGradientSource>
-                </magic:GradientView.GradientSource>
-            </magic:GradientView>-->
-
-            <BoxView  Grid.RowSpan="13" Grid.ColumnSpan="13" Style="{StaticResource BoxViewLinearGradientBrush}" />
+            <magic:GradientView Grid.Row="9" Grid.RowSpan="4" Grid.ColumnSpan="13"
+                                GradientSource="linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%)" />
+            <BoxView  Grid.Row="9" Grid.RowSpan="4" Grid.ColumnSpan="13" Color="DarkSlateBlue" Opacity="0.7" />
+            <!--<BoxView  Grid.Row="9" Grid.RowSpan="4" Grid.ColumnSpan="13" Style="{StaticResource BoxViewLinearGradientBrush}" />-->
 
             <pcv:PancakeView Grid.RowSpan="11" Grid.ColumnSpan="13" CornerRadius="0,0,35,35" 
-                             Border="{pcv:BorderMarkup Color=DarkSlateBlue, Thickness=1}">
+                             Border="{pcv:BorderMarkup Color=Gray, Thickness=1}"
+                             Margin="-1,-1,-1,0">
                 <CarouselView x:Name="myCarouselView" 
                             VerticalOptions="Center"
                             ItemsSource="{Binding Rosenkranz}"

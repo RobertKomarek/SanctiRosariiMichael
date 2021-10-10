@@ -397,7 +397,7 @@ namespace ErzengelMichael.ViewModels
                 "O Ihr hocherleuchteten Cherubim! Erlanget mir die wahre Erkenntnis Gottes und die Wissenschaft der Heiligen."
                 + Environment.NewLine + Environment.NewLine + "1 Vater unser..., 3 Ave Maria",
 
-                ImageofAngel = "michael2pd.jpg"
+                ImageofAngel = "michael3pd.jpg"
             });
 
             getLanguage.Add(new Rosenkranz

@@ -20,7 +20,7 @@ namespace ErzengelMichael.Droid
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDcxMTY0QDMxMzkyZTMyMmUzMFdZbk40aU9xZTFUQ1d4K1Q0dWdleUxVaWxKNUYzeHJldWVuMXpYbWo1TTg9");
 
             //StatusBarColor ändern
-            this.SetStatusBarColor(Color.FromHex("#800080").ToAndroid());
+            this.SetStatusBarColor(Color.FromHex("#730073").ToAndroid());
 
             //MediaElement_Experimental
             Forms.SetFlags(new string[] 

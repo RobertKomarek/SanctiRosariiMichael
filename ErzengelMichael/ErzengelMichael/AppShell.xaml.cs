@@ -1,4 +1,4 @@
-﻿using ErzengelMichael.ViewModels;
+using ErzengelMichael.ViewModels;
 using ErzengelMichael.Views;
 using System;
 using System.Collections.Generic;

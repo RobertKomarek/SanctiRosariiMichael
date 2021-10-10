@@ -14,22 +14,22 @@
     <vm:RosenkranzViewModel/>
 </ContentPage.BindingContext>
 
-<ContentPage.Background>
-    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-        <GradientStop Offset="0.1" Color="Purple" />
-        <GradientStop Offset="0.9" Color="DarkSlateBlue" />
-    </LinearGradientBrush>
-</ContentPage.Background>
+ <ContentPage.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0.3" Color="Purple" />
+                <GradientStop Offset="0.5" Color="White"/>
+                <GradientStop Offset="0.6" Color="#5A5096"/>
+            </LinearGradientBrush>
+        </ContentPage.Background>
 
 <ContentPage.Content>
 
      
 <Grid RowDefinitions="*,*,*,*">
 
-    <magic:GradientView
+    <magic:GradientView Opacity="0.7"
         Grid.RowSpan="4"
-        GradientSource="radial-gradient(circle at 47% 14%, rgba(205, 205, 205,0.04) 0%, rgba(205, 205, 205,0.04) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 35% 12%, rgba(215, 215, 215,0.04) 0%, rgba(215, 215, 215,0.04) 4%,transparent 4%, transparent 100%),radial-gradient(circle at 1% 35%, rgba(24, 24, 24,0.04) 0%, rgba(24, 24, 24,0.04) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 21% 1%, rgba(0, 0, 0,0.04) 0%, rgba(0, 0, 0,0.04) 26%,transparent 26%, transparent 100%),radial-gradient(circle at 23% 82%, rgba(249, 249, 249,0.04) 0%, rgba(249, 249, 249,0.04) 60%,transparent 60%, transparent 100%),radial-gradient(circle at 11% 54%, rgba(251, 251, 251,0.04) 0%, rgba(251, 251, 251,0.04) 23%,transparent 23%, transparent 100%),radial-gradient(circle at 69% 68%, rgba(234, 234, 234,0.04) 0%, rgba(234, 234, 234,0.04) 10%,transparent 10%, transparent 100%),linear-gradient(181deg, rgb(228, 46, 222),rgb(63, 61, 215))"
-    />
+        GradientSource="radial-gradient(circle at 52% 94%, rgba(169, 169, 169,0.04) 0%, rgba(169, 169, 169,0.04) 50%,rgba(199, 199, 199,0.04) 50%, rgba(199, 199, 199,0.04) 100%),radial-gradient(circle at 96% 98%, rgba(61, 61, 61,0.04) 0%, rgba(61, 61, 61,0.04) 50%,rgba(201, 201, 201,0.04) 50%, rgba(201, 201, 201,0.04) 100%),radial-gradient(circle at 93% 97%, rgba(227, 227, 227,0.04) 0%, rgba(227, 227, 227,0.04) 50%,rgba(145, 145, 145,0.04) 50%, rgba(145, 145, 145,0.04) 100%),radial-gradient(circle at 79% 52%, rgba(245, 245, 245,0.04) 0%, rgba(245, 245, 245,0.04) 50%,rgba(86, 86, 86,0.04) 50%, rgba(86, 86, 86,0.04) 100%),linear-gradient(181deg, rgb(210, 9, 198),rgb(72,61,139))"/>
              
     <StackLayout Grid.RowSpan="4" Spacing="35">
 

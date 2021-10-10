@@ -1,4 +1,4 @@
-﻿using ErzengelMichael.Services;
+using ErzengelMichael.Services;
 using ErzengelMichael.Views;
 using System;
 using Xamarin.Forms;
