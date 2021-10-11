@@ -82,6 +82,21 @@ namespace ErzengelMichael.ViewModels
                 Source = "portugal.jpg",
                 Language = "Português"
             });
+
+            Languages.Add(new Languages
+            {
+                CommandParameter = "",
+                Source = "",
+                Language = ""
+            });
+
+            Languages.Add(new Languages
+            {
+                CommandParameter = "",
+                Source = "",
+                Language = ""
+            });
+
             #endregion
 
             Rosenkranz = new ObservableCollection<Rosenkranz>();
@@ -457,7 +472,7 @@ namespace ErzengelMichael.ViewModels
             getLanguage.Add(new Rosenkranz
             {
                 Prayer =
-                "O heilige Engel! Erlanget mir wahre Demut und großes Vertrauen auf Gottes Barmherzigkeit" + Environment.NewLine +
+                "O heilige Engel! Erlanget mir wahre Demut und großes Vertrauen auf Gottes Barmherzigkeit." + Environment.NewLine +
                 Environment.NewLine + "1 Vater unser..., 3 Ave Maria",
 
                 ImageofAngel = "michael10pd.jpg"
@@ -631,7 +646,7 @@ namespace ErzengelMichael.ViewModels
             getLanguage.Add(new Rosenkranz
             {
                 Prayer =
-                    "By the intercession of St.Michael and the celestial Choir of Thrones may the Lord infuse into" +
+                    "By the intercession of St.Michael and the celestial Choir of Thrones may the Lord infuse into " +
                     "our hearts a true and sincere spirit of humility. Amen." +
                     Environment.NewLine + Environment.NewLine + "(Our Father, Three Hail Marys)",
 

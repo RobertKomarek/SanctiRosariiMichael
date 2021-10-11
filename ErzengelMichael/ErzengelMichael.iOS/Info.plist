@@ -17,16 +17,15 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>14.5</string>
+	<string>14.4</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.marinakomarek.sanctirosariimichael</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleName</key>
 	<string>Sancti Rosarii Michael</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
-	
 	<key>CFBundleDisplayName</key>
 	<string>Sancti Rosarii Michael</string>
 	<key>UILaunchStoryboardName</key>
@@ -38,7 +37,8 @@
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-
+	<string>1.1</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 </dict>
 </plist>

@@ -2,6 +2,7 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
              x:Class="ErzengelMichael.App" >
 
     <Application.BindingContext>
@@ -18,7 +19,10 @@
             <Style x:Key="BoxViewWhite" TargetType="BoxView">
                 <Setter Property="HeightRequest">
                     <Setter.Value>
-                        <OnPlatform iOS="0.5" Android="0.2"/>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS" Value="0.5" />
+                            <On Platform="Android" Value="0.2"/>
+                        </OnPlatform>
                     </Setter.Value>
                 </Setter>
                 <Setter Property="Color" Value="White"/>
@@ -27,7 +31,10 @@
             <Style x:Key="BoxViewGray" TargetType="BoxView">
                 <Setter Property="HeightRequest">
                     <Setter.Value>
-                        <OnPlatform iOS="0.5" Android="0.2"/>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS" Value="0.5" />
+                            <On Platform="Android" Value="0.2"/>
+                        </OnPlatform>
                     </Setter.Value>
                 </Setter>
                 <Setter Property="Color" Value="Gray"/>

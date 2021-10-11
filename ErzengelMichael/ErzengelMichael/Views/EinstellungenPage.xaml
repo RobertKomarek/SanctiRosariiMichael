@@ -50,23 +50,23 @@
                 </StackLayout>
             </sfExpander:SfExpander.Header>
             <sfExpander:SfExpander.Content>
-                    <ListView ItemsSource="{Binding Languages}"
-                                HasUnevenRows="True"
-                                CachingStrategy="RecycleElement"
-                                BackgroundColor="Transparent">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <Grid ColumnDefinitions="*,*" Margin="20">
-                                        <ImageButton CornerRadius="25" HeightRequest="150"  BackgroundColor="Transparent" CommandParameter="{Binding CommandParameter}" 
-                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:RosenkranzViewModel}}, Path=ChangeLanguageCommand}"
-                                            Source="{Binding Source}" VerticalOptions="Center" Aspect="AspectFill" />
-                                        <Label Grid.Column="1" Text="{Binding Language}" FontSize="Large" VerticalOptions="Center" Margin="10,0,0,0"/>
-                                    </Grid>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                <ListView ItemsSource="{Binding Languages}"
+                        HasUnevenRows="True"
+                        CachingStrategy="RecycleElement"
+                        BackgroundColor="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid ColumnDefinitions="*,*" Margin="20">
+                                    <ImageButton CornerRadius="25" HeightRequest="150"  BackgroundColor="Transparent" CommandParameter="{Binding CommandParameter}" 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:RosenkranzViewModel}}, Path=ChangeLanguageCommand}"
+                                        Source="{Binding Source}" VerticalOptions="Center" Aspect="AspectFill" />
+                                    <Label Grid.Column="1" Text="{Binding Language}" FontSize="Large" VerticalOptions="Center" Margin="10,0,0,0"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </sfExpander:SfExpander.Content>
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroupList>

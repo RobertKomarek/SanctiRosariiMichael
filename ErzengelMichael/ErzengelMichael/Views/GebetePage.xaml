@@ -39,10 +39,15 @@
                     <StackLayout >
                         <Label Text="{Binding Rosenkranz[0].NativeLanguage}" HorizontalOptions="Center" FontSize="22" TextColor="White" FontFamily="OS-B" Padding="10" />
                         <Label Text="{Binding Rosenkranz[0].PrayerLeoXIII}"  HorizontalTextAlignment="Center" TextColor="White" FontSize="22" />
-                        <BoxView Style="{StaticResource BoxViewWhite}" />
-                        <Label Text="{Binding Rosenkranz[0].Latin}" FontSize="22" HorizontalOptions="Center" TextColor="White" FontFamily="OS-B" Padding="10" />
+                        <!--<BoxView Style="{StaticResource BoxViewWhite}" />-->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="20">
+                            <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
+                            <Label Text="&#xf654;" FontSize="22" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
+                            <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
+                        </StackLayout>
+                        <Label Text="{Binding Rosenkranz[0].Latin}" FontSize="22" HorizontalOptions="Center" TextColor="White" FontFamily="OS-B" />
                         <Label Text="{Binding Rosenkranz[0].PrayerLeoXIIILatin}" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" />
-                        <BoxView Style="{StaticResource BoxViewWhite}" />
+                        <!--<BoxView Style="{StaticResource BoxViewWhite}" />-->
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
@@ -69,7 +74,7 @@
 
             <StackLayout Grid.Row="{OnPlatform iOS=1, Android=0}" Grid.RowSpan="{OnPlatform iOS=12, Android=13}" Margin="0,30,0,10" >
                 <StackLayout>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="15">
                         <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
                         <Label Text="&#xf654;" FontSize="22" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
                         <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>

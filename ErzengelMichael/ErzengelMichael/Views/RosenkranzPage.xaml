@@ -5,8 +5,7 @@
             xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
             xmlns:pcv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
             xmlns:magic="http://magic.com/schemas/gradients"
-            Title="{Binding Rosenkranz[0].ContentPageTitle}"
-            Background="DarkSlateBlue">
+            Title="{Binding Rosenkranz[0].ContentPageTitle}"  >
             
     <ContentPage.BindingContext>
         <vm:RosenkranzViewModel/>
