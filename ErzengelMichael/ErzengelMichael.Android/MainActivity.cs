@@ -17,7 +17,7 @@ namespace ErzengelMichael.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             //Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDcxMTY0QDMxMzkyZTMyMmUzMFdZbk40aU9xZTFUQ1d4K1Q0dWdleUxVaWxKNUYzeHJldWVuMXpYbWo1TTg9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTE4MjQyQDMxMzkyZTMzMmUzMGx5cmIwbzUrb3NJZVFMRmt3ZFhEUkJtOFI0MFBSKzVobkFkZzFZaHVWcWc9");
 
             //StatusBarColor ändern
             this.SetStatusBarColor(Color.FromHex("#730073").ToAndroid());

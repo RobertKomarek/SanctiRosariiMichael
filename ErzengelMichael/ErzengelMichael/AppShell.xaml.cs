@@ -17,5 +17,8 @@ namespace ErzengelMichael
             Routing.RegisterRoute(nameof(VersprechungenPage), typeof(VersprechungenPage));
         }
 
+        void Shell_Appearing(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }

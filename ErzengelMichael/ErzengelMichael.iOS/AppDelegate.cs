@@ -29,7 +29,7 @@ namespace ErzengelMichael.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             //Register Syncfusion License
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDcxMTY0QDMxMzkyZTMyMmUzMFdZbk40aU9xZTFUQ1d4K1Q0dWdleUxVaWxKNUYzeHJldWVuMXpYbWo1TTg9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTE4MjQyQDMxMzkyZTMzMmUzMGx5cmIwbzUrb3NJZVFMRmt3ZFhEUkJtOFI0MFBSKzVobkFkZzFZaHVWcWc9");
             
             //global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             //MediaElement_Experimental

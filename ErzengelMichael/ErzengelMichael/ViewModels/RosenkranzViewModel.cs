@@ -16,6 +16,7 @@ namespace ErzengelMichael.ViewModels
         public Command ForwardOnePositionCommand { get; set; }
         public Command ChangeLanguageCommand { get; set; }
         public Command GoToIcons8Command { get; set; }
+        //public Command RosenkranzPageAppearingCommand { get; set; }
 
         private int _carouselViewPosition;
         public int CarouselViewPosition
@@ -28,7 +29,7 @@ namespace ErzengelMichael.ViewModels
             }
         }
 
-
+        
         public RosenkranzViewModel()
         {
             //OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
@@ -36,11 +37,17 @@ namespace ErzengelMichael.ViewModels
             BackOnePositionCommand = new Command(BackOnePosition);
             ForwardOnePositionCommand = new Command(ForwardOnePosition);
             ChangeLanguageCommand = new Command<string>(ChangeLanguage);
-            
-            
-            #region LANGUAGE SPRACHE AUSWÄHLEN
-            Languages = new ObservableCollection<Languages>();
+            //RosenkranzPageAppearingCommand = new Command(RosenkranzPageAppearing);
 
+            Languages = new ObservableCollection<Languages>();
+            Rosenkranz = new ObservableCollection<Rosenkranz>();
+
+
+            #region LANGUAGE SPRACHE AUSWÄHLEN
+
+            //Languages = new ObservableCollection<Languages>();
+
+            //Für View EinstellungenPage.xaml
             Languages.Add(new Languages
             {
                 CommandParameter = "French",
@@ -96,11 +103,10 @@ namespace ErzengelMichael.ViewModels
                 Source = "",
                 Language = ""
             });
-
             #endregion
 
-            Rosenkranz = new ObservableCollection<Rosenkranz>();
 
+            //Rosenkranz = new ObservableCollection<Rosenkranz>();
             if (App.Current.Properties.ContainsKey("Spracheinstellungen"))
             {
                 var sprachEinstellungen = Application.Current.Properties["Spracheinstellungen"].ToString();
@@ -141,8 +147,14 @@ namespace ErzengelMichael.ViewModels
                 //DEFAULT LANGUAGE
                 Rosenkranz = GetEnglish();
             }
+
         }
-               
+
+        //private void RosenkranzPageAppearing()
+        //{
+           
+        //}
+
 
         #region Seiten vor und zurück bzw. zurück zu Seite 1
         private void ForwardOnePosition()
@@ -179,6 +191,34 @@ namespace ErzengelMichael.ViewModels
                     Rosenkranz = GetGerman();
                     App.Current.MainPage.DisplayAlert("Einstellungen", "Sprache geändert auf Deutsch!", "OK");
                     break;
+                //var interimRosenkranz = GetGerman();
+                //for (int i = 0; i < interimRosenkranz.Count; i++)
+                //{
+                //    Rosenkranz.Add(new Rosenkranz
+                //    {
+                //        ContentPageTitle = interimRosenkranz[i].ContentPageTitle,
+                //        ContentPageTitleIndulgences = interimRosenkranz[i].ContentPageTitleIndulgences,
+                //        ContentPageTitleLeoXIII = interimRosenkranz[i].ContentPageTitleLeoXIII,
+                //        ContentPageTitleLitany = interimRosenkranz[i].ContentPageTitleLitany,
+                //        ContentPageTitlePromisesMichael = interimRosenkranz[i].ContentPageTitlePromisesMichael,
+                //        ImageofAngel = interimRosenkranz[i].ImageofAngel,
+                //        Indulgences = interimRosenkranz[i].Indulgences,
+                //        Latin = interimRosenkranz[i].Latin,
+                //        Litany = interimRosenkranz[i].Litany,
+                //        ManualHeader = interimRosenkranz[i].ManualHeader,
+                //        NativeLanguage = interimRosenkranz[i].NativeLanguage,
+                //        Prayer = interimRosenkranz[i].Prayer,
+                //        PrayerLeoXIII = interimRosenkranz[i].PrayerLeoXIII,
+                //        PrayerLeoXIIILatin = interimRosenkranz[i].PrayerLeoXIIILatin,
+                //        Promises = interimRosenkranz[i].Promises,
+                //        SettingsText = interimRosenkranz[i].SettingsText,
+                //        TabBarTitleManual = interimRosenkranz[i].TabBarTitleManual,
+                //        TabBarTitlePrayers = interimRosenkranz[i].TabBarTitlePrayers,
+                //        TabBarTitlePromises = interimRosenkranz[i].TabBarTitlePromises,
+                //        TabBarTitleRosary = interimRosenkranz[i].TabBarTitleRosary,
+                //        TabBarTitleSettings = interimRosenkranz[i].TabBarTitleSettings
+                //    });
+                //}
 
                 case "English":
                     Rosenkranz = GetEnglish();

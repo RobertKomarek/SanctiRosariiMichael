@@ -4,8 +4,8 @@
             xmlns:vm="clr-namespace:ErzengelMichael.ViewModels"
             x:Class="ErzengelMichael.Views.GebetePage"
             BarBackgroundColor="{OnPlatform iOS=DarkSlateBlue, Android=Purple}"
-            xmlns:magic="http://magic.com/schemas/gradients"
-            Title="{Binding Rosenkranz[0].TabBarTitlePrayers}">
+            Title="{Binding Rosenkranz[0].TabBarTitlePrayers}"
+            Shell.NavBarIsVisible="True">
 
     <TabbedPage.BindingContext>
         <vm:RosenkranzViewModel/>
@@ -13,6 +13,7 @@
 
     <ContentPage Title="{Binding Rosenkranz[0].ContentPageTitleLeoXIII}" BackgroundColor="DarkSlateBlue">
 
+        
         <ContentPage.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                 <GradientStop Offset="0.3" Color="Purple" />

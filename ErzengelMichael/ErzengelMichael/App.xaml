@@ -5,9 +5,9 @@
              xmlns:system="clr-namespace:System;assembly=netstandard"
              x:Class="ErzengelMichael.App" >
 
-    <Application.BindingContext>
+    <!--<Application.BindingContext>
         <vm:RosenkranzViewModel/>
-    </Application.BindingContext>
+    </Application.BindingContext>-->
     <!--
         Define global resources and styles here, that apply to all pages in your app.
     -->
@@ -15,6 +15,11 @@
         
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
+
+            <!--<Style ApplyToDerivedTypes="True" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="Purple"/>
+                <Setter Property="BarTextColor" Value="Black"/>
+            </Style>-->
 
             <Style x:Key="BoxViewWhite" TargetType="BoxView">
                 <Setter Property="HeightRequest">
@@ -59,9 +64,9 @@
                 </Setter>
             </Style>
 
-            <Style TargetType="ContentPage" x:Key="RosenkranzContentPage">
+            <!--<Style TargetType="ContentPage" x:Key="RosenkranzContentPage">
                 <Setter Property="NavigationPage.Title" Value="{Binding}"/>
-            </Style>
+            </Style>-->
             
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>

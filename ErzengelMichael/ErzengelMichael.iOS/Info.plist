@@ -21,7 +21,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.marinakomarek.sanctirosariimichael</string>
 	<key>CFBundleVersion</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>CFBundleName</key>
 	<string>Sancti Rosarii Michael</string>
 	<key>XSAppIconAssets</key>
@@ -37,7 +37,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>UIRequiresFullScreen</key>
 	<true/>
 </dict>
