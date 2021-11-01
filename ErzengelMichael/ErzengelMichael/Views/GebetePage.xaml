@@ -38,16 +38,17 @@
                 <BoxView Style="{StaticResource BoxViewWhite}" />
                 <ScrollView>
                     <StackLayout >
-                        <Label Text="{Binding Rosenkranz[0].NativeLanguage}" HorizontalOptions="Center" FontSize="22" TextColor="White" FontFamily="OS-B" Padding="10" />
-                        <Label Text="{Binding Rosenkranz[0].PrayerLeoXIII}"  HorizontalTextAlignment="Center" TextColor="White" FontSize="22" />
+                        <Label Text="{Binding Rosenkranz[0].NativeLanguage}" HorizontalOptions="Center"
+                               TextColor="White" FontFamily="OS-B" Padding="10" />
+                        <Label Text="{Binding Rosenkranz[0].PrayerLeoXIII}"  HorizontalTextAlignment="Center" TextColor="White" />
                         <!--<BoxView Style="{StaticResource BoxViewWhite}" />-->
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="20">
                             <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
                             <Label Text="&#xf654;" FontSize="22" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
                             <Label Text="&#xf654;" FontSize="Medium" FontFamily="FA-S" TextColor="White" Opacity="0.5"/>
                         </StackLayout>
-                        <Label Text="{Binding Rosenkranz[0].Latin}" FontSize="22" HorizontalOptions="Center" TextColor="White" FontFamily="OS-B" />
-                        <Label Text="{Binding Rosenkranz[0].PrayerLeoXIIILatin}" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" />
+                        <Label Text="{Binding Rosenkranz[0].Latin}" HorizontalOptions="Center" TextColor="White" FontFamily="OS-B"/>
+                        <Label Text="{Binding Rosenkranz[0].PrayerLeoXIIILatin}" HorizontalTextAlignment="Center" TextColor="White"/>
                         <!--<BoxView Style="{StaticResource BoxViewWhite}" />-->
                     </StackLayout>
                 </ScrollView>
@@ -66,13 +67,6 @@
 
         
         <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*">
-
-             <!--<magic:GradientView Opacity="0.7"
-                Grid.RowSpan="13"
-                GradientSource="radial-gradient(circle at 52% 94%, rgba(169, 169, 169,0.04) 0%, rgba(169, 169, 169,0.04) 50%,rgba(199, 199, 199,0.04) 50%, rgba(199, 199, 199,0.04) 100%),radial-gradient(circle at 96% 98%, rgba(61, 61, 61,0.04) 0%, rgba(61, 61, 61,0.04) 50%,rgba(201, 201, 201,0.04) 50%, rgba(201, 201, 201,0.04) 100%),radial-gradient(circle at 93% 97%, rgba(227, 227, 227,0.04) 0%, rgba(227, 227, 227,0.04) 50%,rgba(145, 145, 145,0.04) 50%, rgba(145, 145, 145,0.04) 100%),radial-gradient(circle at 79% 52%, rgba(245, 245, 245,0.04) 0%, rgba(245, 245, 245,0.04) 50%,rgba(86, 86, 86,0.04) 50%, rgba(86, 86, 86,0.04) 100%),linear-gradient(181deg, rgb(210, 9, 198),rgb(72,61,139))"/>-->
-             
-            <!--<BoxView Grid.RowSpan="13" BackgroundColor="Black" Opacity="0.2"/>-->
-
             <StackLayout Grid.Row="{OnPlatform iOS=1, Android=0}" Grid.RowSpan="{OnPlatform iOS=12, Android=13}" Margin="0,30,0,10" >
                 <StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="15">
@@ -86,7 +80,7 @@
                     <ScrollView>
                         <StackLayout Spacing="10" Padding="5">
                             <Label HorizontalTextAlignment="Center" Text="{Binding Rosenkranz[0].Litany}" 
-                                FontSize="Large" TextColor="White" />
+                                   TextColor="White" />
                         </StackLayout>
                     </ScrollView>
                 </StackLayout>

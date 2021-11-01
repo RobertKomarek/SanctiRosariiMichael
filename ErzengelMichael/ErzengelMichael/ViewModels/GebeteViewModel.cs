@@ -1,4 +1,4 @@
-﻿using ErzengelMichael.Models;
+using ErzengelMichael.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

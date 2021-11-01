@@ -51,7 +51,7 @@
                                     IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:RosenkranzViewModel}}, Path=LottieSwipeUpIsVisible}"
                                     RepeatCount="4" AutoPlay="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />-->
                                 <ScrollView Grid.Row="7" Grid.RowSpan="4" Grid.ColumnSpan="13">
-                                    <Label Text="{Binding Prayer}" BackgroundColor="Transparent" FontSize="Large" Margin="10,0,10,0"
+                                    <Label Text="{Binding Prayer}" BackgroundColor="Transparent" Margin="10,0,10,0"
                                         TextColor="White" HorizontalOptions="Fill" VerticalOptions="Fill" IsEnabled="False" HorizontalTextAlignment="Center"/>
                                 </ScrollView>
                                 </Grid>
